@@ -7,10 +7,10 @@ const findById = function (id) {
   return this.items.find(currentItem => currentItem.id === id);
 };
 
-const addItem = function (name) {
+const addItem = function (item) {
   try {
     item.validateName(name);
-    this.items.push(item.create(name));
+    this.items.push(item);
   } catch (e) {
     console.log(e.message);
   }
